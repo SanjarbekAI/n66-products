@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv(
-    dotenv_path="../.env"
+    dotenv_path=".env"
 )
 
 DB_NAME = os.getenv("DB_NAME")
@@ -13,7 +13,7 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 
 DB_CONFIG = {
-    "database": "products",
+    "database": DB_NAME,
     "user": DB_USER,
     "port": DB_PORT,
     "host": DB_HOST,
